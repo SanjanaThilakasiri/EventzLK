@@ -53,6 +53,11 @@ const Hero = () => {
     setCurrentImageIndex(index);
   };
 
+  const scrollToSection = () => {
+  const element = document.getElementById('events-section');
+  element?.scrollIntoView({ behavior: 'smooth' });
+};
+
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image Slider */}
@@ -124,7 +129,7 @@ const Hero = () => {
           
           {/*  Explore Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onClick={()=> navigate('/concerts')} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg min-w-48 cursor-pointer">
+            <button onClick={scrollToSection} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg min-w-48 cursor-pointer">
               Explore Events
             </button>
           </div>

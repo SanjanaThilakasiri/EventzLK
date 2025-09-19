@@ -8,6 +8,7 @@ import MyBookings from './pages/MyBookings.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import {Toaster} from 'react-hot-toast'
+import FeaturedConcerts from './components/FeaturedConcerts.jsx'
 
 const App = () => {
 const isAdminRoute = useLocation().pathname.startsWith('/admin')
@@ -22,6 +23,7 @@ const isAdminRoute = useLocation().pathname.startsWith('/admin')
       <Route path="/events/:id" element={<EventDetails />} />
       <Route path="/favorite" element={<Favorite />} />
       <Route path="/my-bookings" element={<MyBookings />} />
+      <Route path="/featured-concerts" element={<FeaturedConcerts />} />
     </Routes>
     {!isAdminRoute && <Footer />}
     </>
